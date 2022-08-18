@@ -24,5 +24,3 @@
                                                            (not= file "")))
                                                 (vim.api.nvim_del_augroup_by_name :nvim-treesitter)
                                                 ((. (require :packer) :loader) :nvim-treesitter)))}))})
-
-

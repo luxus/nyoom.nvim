@@ -9,5 +9,3 @@
         :hijack_directories {:enable true :auto_open true}
         :actions {:open_file {:resize_window true}}
         :renderer {:indent_markers {:enable false}}})
-
-

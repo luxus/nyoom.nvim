@@ -7,5 +7,5 @@
 (command! PackerCompile '(warn! "Please use the bin/nyoom script instead of PackerCompile"))
 (command! PackerStatus "lua require 'packages' require('packer').status()")
 
-;; Scratch 
+;; Scratch
 (command! Scratch "lua require('utils.scratch').scratch()")

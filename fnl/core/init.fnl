@@ -27,7 +27,7 @@
 ;; load commands
 (require :core.commands)
 
-;; add Mason to path. This replaces the need to load mason at startup 
+;; add Mason to path. This replaces the need to load mason at startup
 (set vim.env.PATH (.. vim.env.PATH ":" (vim.fn.stdpath :data) :/mason/bin))
 
 ;; load packer if its available
@@ -36,4 +36,3 @@
 
 ;; userconfig
 (require :config)
-

@@ -8,6 +8,3 @@
                                                      ((. (require :packer) :loader) :nvim-notify)
                                                      (set vim.notify (require :notify))
                                                      (vim.notify msg level opts))))})
-
-
-

@@ -1,5 +1,5 @@
 (import-macros {: nyoom-module-p! : map! : let!} :macros)
-(local {: setup} (require :leap)) 
+(local {: setup} (require :leap))
 
 ;; Set leader to space by default
 (let! mapleader " ")
@@ -13,7 +13,7 @@
                        :next_group    :<space>
                        :prev_group    :<tab>}})
 
-;; Regular Leap 
+;; Regular Leap
 (map! [nx] :s "<Plug>(leap-forward)" {:desc "Leap Forward"})
 (map! [nx] :S "<Plug>(leap-backward)" {:desc "Leap Backward"})
 (map! [o] :z "<Plug>(leap-forward)" {:desc "Leap Forward"})
@@ -22,7 +22,7 @@
 (map! [o] :x "<Plug>(leap-forward-x)" {:desc "Leap Forward (x)"})
 (map! [o] :X "<Plug>(leap-backward-x)" {:desc "Leap Backward (x)"})
 
-;; easier command line mode + 
+;; easier command line mode +
 (map! [n] ";" ":" {:desc "vim-ex"})
 
 (nyoom-module-p! completion.telescope

@@ -1,6 +1,6 @@
 (import-macros {: nyoom!} :macros)
 
-;;; fnl/modules.fnl 
+;;; fnl/modules.fnl
 ;; NOTE: Any module with a TODO either isn't ready or hasn't been implemented yet.
 
 (nyoom! completion.cmp             ; the ultimate code completion backend
@@ -43,7 +43,7 @@
         tools.conjure              ; run code, run (also, repls)
         tools.antifennel           ; hate fennel? write lua and compile it back
         tools.pastebin             ; interacting with pastebin platforms
-        tools.lsp                  ; :vscode 
+        tools.lsp                  ; :vscode
         tools.neogit               ; a git porcelain for Neovim
         ;;tools.rgb                ; creating color strings
         tools.tree-sitter          ; syntax and parsing, sitting in a tree...

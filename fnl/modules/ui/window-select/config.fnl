@@ -8,5 +8,3 @@
     (vim.api.nvim_set_current_win picked-window-id)))
 
 (map! [n] "<leader>w" '(set-picked-window))
-
-

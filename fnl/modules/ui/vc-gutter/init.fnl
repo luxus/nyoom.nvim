@@ -12,5 +12,3 @@
                                                                                              (vim.schedule (fn []
                                                                                                              ((. (require :packer)
                                                                                                                  :loader) :gitsigns.nvim)))))}))})
-
-

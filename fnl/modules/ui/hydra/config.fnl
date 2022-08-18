@@ -18,17 +18,17 @@
 ;;               : blame_line
 ;;               : show} (require :gitsigns))
 ;;       (local git-hint "
-;;   
+;;
 ;;                     Git
-;;   
+;;
 ;;     _J_: next hunk     _d_: show deleted
-;;     _K_: prev hunk     _u_: undo last stage  
+;;     _K_: prev hunk     _u_: undo last stage
 ;;     _s_: stage hunk    _/_: show base file
 ;;     _p_: preview hunk  _S_: stage buffer
 ;;     _b_: blame line    _B_: blame show full
 ;;   ^
 ;;     _<Enter>_: Neogit         _q_: Exit
-;;   
+;;
 ;;       ")
 ;;       (Hydra {:name :Git
 ;;               :hint git-hint
@@ -80,20 +80,20 @@
 ;;                                (vim.cmd "'<,'>Gitsigns stage_hunk"))
 ;;                              (vim.cmd.Gitsigns "stage_hunk")))
 ;;                        {:desc "stage hunk"}]
-;;                       [:u 
+;;                       [:u
 ;;                        undo_stage_hunk
 ;;                        {:desc "undo last stage"}]
-;;                       [:S 
+;;                       [:S
 ;;                        stage_buffer
 ;;                        {:desc "stage buffer"}]
-;;                       [:p 
-;;                        preview_hunk 
+;;                       [:p
+;;                        preview_hunk
 ;;                        {:desc "preview hunk"}]
 ;;                       [:d
 ;;                        toggle_deleted
 ;;                        {:nowait true :desc "toggle deleted"}]
-;;                       [:b 
-;;                        blame_line 
+;;                       [:b
+;;                        blame_line
 ;;                        {:desc :blame}]
 ;;                       [:B
 ;;                        (fn []
@@ -106,10 +106,10 @@
 ;;                        (fn []
 ;;                           (vim.cmd.Neogit))
 ;;                        {:exit true :desc :Neogit}]
-;;                       [:q 
-;;                        nil 
+;;                       [:q
+;;                        nil
 ;;                        {:exit true :nowait true :desc :exit}]]}))))
-    
+
 ;; Vim options
 (nyoom-module-p! ui.nyoom
   (do
@@ -117,7 +117,7 @@
       ^ ^        Options
       ^
       _v_ %{ve} virtual edit
-      _i_ %{list} invisible characters  
+      _i_ %{list} invisible characters
       _s_ %{spell} spell
       _w_ %{wrap} wrap
       _c_ %{cul} cursor line
@@ -126,9 +126,9 @@
       _b_ Toggle Background
       ^
            ^^^^              _<Esc>_
-    
+
     ")
-    
+
     (Hydra {:name :Options
             :hint options-hint
             :config {:color :amaranth
@@ -138,15 +138,15 @@
             :body :<leader>o
             :heads [[:b
                      (fn []
-                       (if (= vim.o.background :dark) 
+                       (if (= vim.o.background :dark)
                            (set! background :light)
                            (set! background :dark))
                       (require :oxocarbon))
-     
+
                      {:desc :Background}]
                     [:n
                      (fn []
-                       (if (= vim.o.number true) 
+                       (if (= vim.o.number true)
                            (set! nonumber)
                            (set! number)))
                      {:desc :number}]
@@ -166,13 +166,13 @@
                      {:desc :virtualedit}]
                     [:i
                      (fn []
-                       (if (= vim.o.list true) 
+                       (if (= vim.o.list true)
                            (set! nolist)
                            (set! list)))
                      {:desc "show invisible"}]
                     [:s
                      (fn []
-                       (if (= vim.o.spell true) 
+                       (if (= vim.o.spell true)
                            (set! nospell)
                            (set! spell)))
                      {:exit true :desc :spell}]
@@ -188,8 +188,8 @@
                            (set! nocursorline)
                            (set! cursorline)))
                      {:desc "cursor line"}]
-                    [:<Esc> 
-                     nil 
+                    [:<Esc>
+                     nil
                      {:exit true}]]})))
 
 ;; Telescope
@@ -201,7 +201,7 @@
            _r_: resume      _f_: files
    ▁
            _h_: vim help    _c_: execute command
-           _k_: keymaps     _;_: commands history  
+           _k_: keymaps     _;_: commands history
            _O_: options     _?_: search history
   ^
   _<Esc>_         _<Enter>_: NvimTree
@@ -214,30 +214,30 @@
                      :hint {:position :middle :border :solid}}
             :mode :n
             :body :<Leader>f
-            :heads [[:f 
+            :heads [[:f
                      (fn []
                        (vim.cmd.Telescope :find_files))]
-                    [:g 
+                    [:g
                      (fn []
                        (vim.cmd.Telescope :live_grep))]
                     [:o
                      (fn []
                        (vim.cmd.Telescope :oldfiles))
                      {:desc "recently opened files"}]
-                    [:h 
+                    [:h
                      (fn []
                        (vim.cmd.Telescope :help_tags))
                      {:desc "vim help"}]
-                    [:k 
+                    [:k
                      (fn []
                        (vim.cmd.Telescope :keymaps))]
-                    [:O 
+                    [:O
                      (fn []
                        (vim.cmd.Telescope :vim_options))]
-                    [:r 
+                    [:r
                      (fn []
                        (vim.cmd.Telescope :resume))]
-                    [:p 
+                    [:p
                      (fn []
                        ((. (. (. (require :telescope) :extensions) :project) :project) {:display_type :full}))
                      {:desc :projects}]
@@ -261,10 +261,10 @@
                      (fn []
                         (vim.cmd :NvimTreeToggle))
                      {:exit true :desc :NvimTree}]
-                    [:<Esc> 
-                     nil 
+                    [:<Esc>
+                     nil
                      {:exit true :nowait true}]]})))
-  
+
 ;; Visuals
 (nyoom-module-p! tools.tree-sitter
   (do
@@ -273,7 +273,7 @@
   ^
   _z_ TrueZen Ataraxis
   _p_ TS Playground
-  _h_ TS Highlight Capture  
+  _h_ TS Highlight Capture
   ^
   ^^^^              _<Esc>_
 
@@ -294,8 +294,8 @@
                     [:h
                      (fn []
                        (vim.cmd :TSHighlightCapturesUnderCursor))]
-                    [:<Esc> 
-                     nil 
+                    [:<Esc>
+                     nil
                      {:exit true}]]})))
 
 ;; Rust
@@ -309,7 +309,7 @@
   _d_: debugabbles    _c_: open cargo
   _s_: rustssr        _p_: parent module
   _h_: hover actions  _w_: reload workspace
-  _D_: open docs      _g_: view create graph  
+  _D_: open docs      _g_: view create graph
 ^
   _i_: Toggle Inlay Hints     _q_: Exit
 
@@ -321,11 +321,11 @@
                      :hint {:position :middle :border :solid}}
             :mode :n
             :body :<Leader>r
-            :heads [[:r 
+            :heads [[:r
                      (fn []
                        (vim.cmd.RustRunnables))
                      {:exit true}]
-                    [:d 
+                    [:d
                      (fn []
                        (vim.cmd.RustDebuggables))
                      {:exit true}]
@@ -333,23 +333,23 @@
                      (fn []
                        (vim.cmd.RustSSR))
                      {:exit true}]
-                    [:h 
+                    [:h
                      (fn []
                        (vim.cmd.RustHoverActions))
                      {:exit true}]
-                    [:D 
+                    [:D
                      (fn []
                        (vim.cmd.RustOpenExternalDocs))
                      {:exit true}]
-                    [:m 
+                    [:m
                      (fn []
                        (vim.cmd.RustExpandMacro))
                      {:exit true}]
-                    [:c 
+                    [:c
                      (fn []
                        (vim.cmd.RustOpenCargo))
                      {:exit true}]
-                    [:p 
+                    [:p
                      (fn []
                        (vim.cmd.RustParentModule))
                      {:exit true}]
@@ -365,5 +365,5 @@
                      (fn []
                        (vim.cmd.RustToggleInlayHints))]
                     [:q
-                     nil 
+                     nil
                      {:exit true :nowait true}]]})))

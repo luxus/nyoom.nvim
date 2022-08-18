@@ -20,7 +20,7 @@
 
 ;; To install a package with Doom you must declare them here and run 'nyoom sync'
 ;; on the command line, then restart nvim for the changes to take effect
-;; The syntax is as follows: 
+;; The syntax is as follows:
 
 ;; (use-package! :username/repo {:opt true
 ;;                               :defer reponame-to-defer

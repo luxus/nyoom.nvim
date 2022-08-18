@@ -143,14 +143,14 @@
    (fn get-lsp-diagnostic []
      (when (not (rawget vim :lsp))
        (lua "return \"\""))
-   
+
      (local count [0 0 0 0])
-   
+
      (local result {:errors (. count vim.diagnostic.severity.ERROR)
                     :warnings (. count vim.diagnostic.severity.WARN)
                     :info (. count vim.diagnostic.severity.INFO)
                     :hints (. count vim.diagnostic.severity.HINT)})
-   
+
      (string.format " %%#StatusLineDiagnosticWarn#%s %%#StatusLineDiagnosticError#%s "
                     (or (. result :warnings) 0) (or (. result :errors) 0)))
    (global Statusline {})

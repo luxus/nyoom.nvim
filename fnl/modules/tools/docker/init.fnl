@@ -5,7 +5,3 @@
                                      :requires [(pack :MunifTanjim/nui.nvim {:opt true})]})
 
 (rock! :404/reactivex)
-
-
-
-

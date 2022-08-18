@@ -21,7 +21,7 @@
      : opts}))
 
 (local bottom-text (if (= (nyoom-package-count) 0)
-                     "Nyoom is in an incomplete state. Please run 'nyoom sync'" 
+                     "Nyoom is in an incomplete state. Please run 'nyoom sync'"
                      (.. "Nyoom loaded " (nyoom-package-count) " packages across " (nyoom-module-count) " modules in 0.0326s")))
 
 

@@ -461,7 +461,7 @@
   See https://github.com/wbthomason/packer.nvim for information about the
   options.
   Additional to those options are some use-package-isms and custom keys:
-  :defer to defer loading a plugin until a file is loaded 
+  :defer to defer loading a plugin until a file is loaded
   :call-setup to call require(%s).setup()
   :nyoom-module to call require(module.%s.config)"
   (assert-compile (str? identifier) "expected string for identifier" identifier)
@@ -619,7 +619,7 @@
     (let [msg (.. "One of your installed modules depends on " (->str name) ". Please enable it")]
      `(vim.notify ,msg vim.log.levels.WARN))))
 
-;; These shouldn't be macros. However I kindof messed up by making all my 
+;; These shouldn't be macros. However I kindof messed up by making all my
 ;; globals compile-time. So now we're sticking with it
 (λ nyoom-package-count []
   (let [packagecount (count _G.nyoom/pack)]
