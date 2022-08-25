@@ -11,10 +11,10 @@
         dashboard            ; a nifty splash screen for neovim
         ;;nyoom-quit         ; buggy, terrible implementation of doom-quit. 
         hydra                ; the heads don't byte
-        ;;indent-guides      ; highlighted indent columns
+        indent-guides      ; highlighted indent columns
         modeline             ; snazzy, nano-emacs-inspired modeline
         ;;nvimtree           ; a project drawer, like NERDTree for vim
-        ;;tabs               ; keep tabs on your buffers, literally
+        tabs               ; keep tabs on your buffers, literally
         vc-gutter            ; vcs diff in the fringe
         not-vi-tilde-fringe  ; disable fringe tildes to mark beyond EOB
         ;;window-select      ; visually switch windows
@@ -22,7 +22,7 @@
         notify)              ; pretty notifications for neovim
 
 (nyoom! :editor
-        ;;fold               ; (nigh) universal code folding
+        fold               ; (nigh) universal code folding
         (format +onsave)     ; automated prettiness
         ;;multiple-cursors   ; TODO editing in many places at once
         parinfer             ; turn lisp into python, sort of
@@ -56,7 +56,7 @@
 (nyoom! :lang
         ;;cc                 ; C > C++ == 1
         ;;clojure            ; java with a lisp
-        ;;common-lisp        ; if you've seen one lisp, you've seen them all
+        common-lisp        ; if you've seen one lisp, you've seen them all
         ;;java               ; the poster child for carpal tunnel syndrome
         ;;julia              ; a better, faster MATLAB
         ;;kotlin             ; a better, slicker Java(Script)

@@ -88,6 +88,6 @@
 ;; colorscheme
 (nyoom-module-p! nyoom
  (do
-   (set! guifont "Liga SFMono Nerd Font:h15")
+   (set! guifont "Iosevka Nerd Font Mono:h14")
    (set! background :dark)
    (set! termguicolors)))
