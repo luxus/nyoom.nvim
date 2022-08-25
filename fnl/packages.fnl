@@ -48,6 +48,7 @@
                                                        (pack :MunifTanjim/nui.nvim)]})
 (use-package! :gbprod/yanky.nvim {:call-setup yanky})
 (use-package! :numToStr/Comment.nvim {:call-setup Comment})
+(use-package! :github/copilot.vim)
 ;; Send plugins to packer
 (echo! "Installing Packages")
 (unpack!)
