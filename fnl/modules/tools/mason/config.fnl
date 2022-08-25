@@ -39,6 +39,9 @@
     (nyoom-module-p! nix
       (table.insert mason-tools :rnix-lsp))
 
+    (nyoom-module-p! php 
+      (table.insert mason-tools :intelephense))
+
     (nyoom-module-p! python
       (table.insert mason-tools :pyright))
 
@@ -63,6 +66,9 @@
     (nyoom-module-p! markdown
       (table.insert mason-tools :prettier))
 
+    ;; (nyoom-module-p! php 
+      ;; (table.insert mason-tools :phpcs))
+
     (nyoom-module-p! python
       (table.insert mason-tools :yapf))
 
@@ -83,6 +89,9 @@
   (do
     (nyoom-module-p! cc
       (table.insert mason-tools :codelldb))
+
+    (nyoom-module-p! php 
+      (table.insert mason-tools :php-debug-adapter))
 
     (nyoom-module-p! python
       (table.insert mason-tools :debugpy))

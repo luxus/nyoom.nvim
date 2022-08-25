@@ -67,6 +67,7 @@
         ;;neorg              ; organize your plain life in plain text, the neovim way TODO +export +present
         ;;(org +pretty)      ; organize your plain life in plain text, the emacs way
         nix                  ; I hereby declare "nix geht mehr!"
+        php                  ; ...
         ;;python             ; beautiful is better than ugly
         rust                 ; Fe2O3.unwrap().unwrap().unwrap().unwrap()
         (sh +fish))          ; she sells {ba,z,fi}sh shells on the C xor

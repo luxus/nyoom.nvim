@@ -37,6 +37,12 @@
 (nyoom-module-p! nix
   (table.insert treesitter-filetypes :nix))
 
+(nyoom-module-p! php 
+  (table.insert treesitter-filetypes :php))
+
+(nyoom-module-p! php.+hack
+  (table.insert treesitter-filetypes :hack))
+
 (nyoom-module-p! python
   (table.insert treesitter-filetypes :python))
 

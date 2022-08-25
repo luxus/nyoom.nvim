@@ -85,6 +85,8 @@
 (nyoom-module-p! nix
   (table.insert lsp-servers :rnix))
 
+(nyoom-module-p! php 
+  (table.insert lsp-servers :intelephense))
 (nyoom-module-p! python
   (table.insert lsp-servers :pyright))
 
