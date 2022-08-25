@@ -91,6 +91,8 @@
 (nyoom-module-p! zig
   (table.insert lsp-servers :zls))
 
+(nyoom-module-p! web:+vue
+  (table.insert mason-tools :volar))
 ;; Load lsp
 (let [servers lsp-servers]
   (each [_ server (ipairs servers)]
