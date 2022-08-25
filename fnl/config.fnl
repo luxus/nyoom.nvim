@@ -19,6 +19,7 @@
 ;; map! is used for mappings
 ;; Heres an example, preseing esc should also remove search highlights
 (map! [n] "<esc>" "<esc><cmd>noh<cr>")
+(map! [n] "<Space>e" "<cmd>NeoTreeFloat<cr>")
 
 (map! [n] "p" "<Plug>(YankyPutAfter)")
 (map! [n] "P" "<Plug>(YankyPutBefore)")
