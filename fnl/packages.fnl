@@ -43,6 +43,7 @@
 ;; ---------------------
 ;; Put your plugins here
 ;; ---------------------
+(use-package! :gbprod/yanky.nvim {:call-setup yanky})
 
 ;; Send plugins to packer
 (echo! "Installing Packages")

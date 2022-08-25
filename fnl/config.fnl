@@ -20,6 +20,12 @@
 ;; Heres an example, preseing esc should also remove search highlights
 (map! [n] "<esc>" "<esc><cmd>noh<cr>")
 
+(map! [n] "p" "<Plug>(YankyPutAfter)")
+(map! [n] "P" "<Plug>(YankyPutBefore)")
+(map! [n] "gp" "<Plug>(YankyGPutAfter)")
+(map! [n] "gP" "<Plug>(YankyGPutBefore)")
+(map! [n] "<c-n>" "<Plug>(YankyCycleForward)")
+(map! [n] "<c-p>" "<Plug>(YankyCycleBackward)")
 ;; Poke around the Nyoom code for more! The following macros are also available:
 ;; contains? check if a table contains a value
 ;; custom-set-face! use nvim_set_hl to set a highlight value
