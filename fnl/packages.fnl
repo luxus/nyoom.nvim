@@ -43,6 +43,9 @@
 ;; ---------------------
 ;; Put your plugins here
 ;; ---------------------
+(use-package! :nvim-neo-tree/neo-tree.nvim {
+                                            :requires [(pack :kyazdani42/nvim-web-devicons)
+                                                       (pack :MunifTanjim/nui.nvim)]})
 (use-package! :gbprod/yanky.nvim {:call-setup yanky})
 
 ;; Send plugins to packer
