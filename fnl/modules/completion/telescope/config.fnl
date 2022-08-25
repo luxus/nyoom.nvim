@@ -20,8 +20,16 @@
 (packadd! telescope-ui-select.nvim)
 (load_extension :ui-select)
 
+;;(packadd! telescope-packer.nvim)
+;;(load_extension :packer)
+(packadd! telescope-media-files.nvim)
+(load_extension :media_files)
+(packadd! telescope-file-browser.nvim)
+(load_extension :file_browser)
 (packadd! telescope-project.nvim)
 (load_extension :project)
+(packadd! telescope-zoxide)
+(load_extension :zoxide)
 
 (nyoom-module-p! telescope.+native
   (do
