@@ -48,6 +48,11 @@
     (nyoom-module-p! sh
       (table.insert mason-tools :bash-language-server))
 
+    (nyoom-module-p! web
+      (do
+         (table.insert mason-tools :html-lsp)
+         (table.insert mason-tools :css-lsp)
+         (table.insert mason-tools :typescript-language-server)))
     (nyoom-module-p! zig
       (table.insert mason-tools :zls))))
 
@@ -67,7 +72,15 @@
       (table.insert mason-tools :yapf))
 
     (nyoom-module-p! sh
-      (table.insert mason-tools :shfmt))))
+      (table.insert mason-tools :shfmt))
+
+    (nyoom-module-p! web
+      (do
+         ;; TODO add tidy support
+         ;; (table.insert mason-tools :tidy)
+         (table.insert mason-tools :eslint_d)
+         (table.insert mason-tools :stylelint_lsp)))))
+   
 
 
 (nyoom-module-p! syntax
@@ -76,7 +89,14 @@
       (table.insert mason-tools :selene))
 
     (nyoom-module-p! python
-      (table.insert mason-tools :pylint))))
+      (table.insert mason-tools :pylint))
+
+    (nyoom-module-p! web
+      (do
+         ;; TODO add tidy support
+         ;; (table.insert mason-tools :tidy)
+         (table.insert mason-tools :eslint_d)
+         (table.insert mason-tools :stylelint_lsp)))))
 
 
 (nyoom-module-p! debugger
@@ -88,6 +108,14 @@
       (table.insert mason-tools :debugpy))
 
     (nyoom-module-p! rust
-      (table.insert mason-tools :codelldb))))
+      (table.insert mason-tools :codelldb))
+
+    (nyoom-module-p! web
+         (table.insert mason-tools :node-debug2-adapter))
+
+    (nyoom-module-p! web.+browser
+      (do
+        (table.insert mason-tools :node-debug2-adapter)
+        (table.insert mason-tools :firefox-debug-adapter)))))
 
 (vim.cmd (.. "MasonInstall " (table.concat mason-tools " ")))

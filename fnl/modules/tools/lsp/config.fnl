@@ -91,6 +91,11 @@
 (nyoom-module-p! zig
   (table.insert lsp-servers :zls))
 
+(nyoom-module-p! web
+  (do
+     (table.insert lsp-servers :html)
+     (table.insert lsp-servers :cssls)
+     (table.insert lsp-servers :tsserver)))
 ;; Load lsp
 (let [servers lsp-servers]
   (each [_ server (ipairs servers)]

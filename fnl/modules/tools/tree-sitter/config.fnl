@@ -49,6 +49,11 @@
 (nyoom-module-p! zig
   (table.insert treesitter-filetypes :zig))
 
+     (table.insert treesitter-filetypes :css)
+     (table.insert treesitter-filetypes :scss)
+     (table.insert treesitter-filetypes :javascript)
+     (table.insert treesitter-filetypes :jsdoc)
+     (table.insert treesitter-filetypes :typescript)))
 (nyoom-module-p! cc
   (do
     (table.insert treesitter-filetypes :c)
