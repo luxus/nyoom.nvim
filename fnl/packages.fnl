@@ -47,7 +47,7 @@
                                             :requires [(pack :kyazdani42/nvim-web-devicons)
                                                        (pack :MunifTanjim/nui.nvim)]})
 (use-package! :gbprod/yanky.nvim {:call-setup yanky})
-
+(use-package! :numToStr/Comment.nvim {:call-setup Comment})
 ;; Send plugins to packer
 (echo! "Installing Packages")
 (unpack!)
