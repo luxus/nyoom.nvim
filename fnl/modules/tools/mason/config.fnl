@@ -53,6 +53,8 @@
          (table.insert mason-tools :html-lsp)
          (table.insert mason-tools :css-lsp)
          (table.insert mason-tools :typescript-language-server)))
+    (nyoom-module-p! web.+svelte
+      (table.insert mason-tools :svelte-language-server))
     (nyoom-module-p! zig
       (table.insert mason-tools :zls))))
 
