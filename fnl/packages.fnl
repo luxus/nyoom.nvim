@@ -49,6 +49,7 @@
 (use-package! :gbprod/yanky.nvim {:call-setup yanky})
 (use-package! :numToStr/Comment.nvim {:call-setup Comment})
 (use-package! :github/copilot.vim)
+(use-package! :ethanholz/nvim-lastplace {:call-setup nvim-lastplace})
 ;; Send plugins to packer
 (echo! "Installing Packages")
 (unpack!)
