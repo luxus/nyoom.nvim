@@ -49,8 +49,12 @@
 (use-package! :gbprod/yanky.nvim {:call-setup yanky})
 (use-package! :numToStr/Comment.nvim {:call-setup Comment})
 (use-package! :github/copilot.vim)
-(use-package! :rose-pine/neovim)
+(use-package! :gmong8se/actually.nvim)
+;;(use-package! :tree-sitter-just {:call-setup tree-sitter-just})
+
+;; (use-package! :rose-pine/neovim)
 (use-package! :ethanholz/nvim-lastplace {:call-setup nvim-lastplace})
+(use-package! :notjedi/nvim-rooter.lua {:call-setup nvim-lastplace})
 ;; Send plugins to packer
 (echo! "Installing Packages")
 (unpack!)

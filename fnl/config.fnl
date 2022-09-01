@@ -4,7 +4,7 @@
 
 ;; You can use the `colorscheme` macro to load a custom theme, or load it manually
 ;; via require. This is the default:
-(colorscheme rose-pine)
+(colorscheme carbon)
 
 ;; The set! macro sets vim.opt options. By default it sets the option to true 
 ;; Appending `no` in front sets it to false. This determines the style of line 

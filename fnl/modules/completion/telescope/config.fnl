@@ -29,6 +29,8 @@
 (load_extension :file_browser)
 (packadd! telescope-project.nvim)
 (load_extension :project)
+(packadd! telescope-repo.nvim)
+(load_extension :repo)
 (packadd! telescope-zoxide)
 (load_extension :zoxide)
 

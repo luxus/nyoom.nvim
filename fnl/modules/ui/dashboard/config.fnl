@@ -66,8 +66,8 @@
                                       ":Telescope oldfiles<CR>")
                               (button "SPC f g" "  Live Grep  "
                                       ":Telescope live_grep<CR>")
-                              (button "SPC f p" "  Projects  "
-                                      ":Telescope marks<CR>")
+                              (button "SPC f p" "  Repos  "
+                                      ":Telescope repo<CR>")
                               (button "SPC f k" "  Keymaps  "
                                       ":Telescope keymaps<CR>")]
                         :opts {:spacing 1}}
