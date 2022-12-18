@@ -196,7 +196,7 @@
            _k_: keymaps     _;_: commands history  
            _O_: options     _?_: search history
   ^
-  _<Esc>_         _<Enter>_: NvimTree
+  _<Esc>_         _<Enter>_: NeoTree
     ")
                    (Hydra {:name :Telescope
                            :hint telescope-hint
@@ -253,8 +253,8 @@
                                     {:desc "execute command"}]
                                    [:<Enter>
                                     (fn []
-                                      (vim.cmd :NvimTreeToggle))
-                                    {:exit true :desc :NvimTree}]
+                                      (vim.cmd :Neotree))
+                                    {:exit true :desc :Neo-Tree}]
                                    [:<Esc> nil {:exit true :nowait true}]]})))
 
 ;; Visuals

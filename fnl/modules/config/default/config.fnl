@@ -23,4 +23,4 @@
                                 :extends "»"})))
 
 (nyoom-module-p! nyoom (set! scrolloff 4))
-(nyoom-module-p! nyoom (set! guifont "Liga SFMono Nerd Font:h15"))
+(nyoom-module-p! nyoom (set! guifont "MonoLisa:h15"))
