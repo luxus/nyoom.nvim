@@ -30,8 +30,8 @@
                      :override {:vim.lsp.util.convert_input_to_markdown_lines true
                                 :vim.lsp.util.stylize_markdown true
                                 :cmp.entry.get_documentation true}}
-               :views {:cmdline_popup {:position {:row 0 :col "50%"}
-                                       :size {:width "98%"}}}
+               :views {:cmdline_popup {:position {:row 5 :col "50%"}
+                                       :size {:width "40%"}}}
                :presets {:long_message_to_split true :lsp_doc_border true}
                :popupmenu {:backend :cmp}
                :format {}})

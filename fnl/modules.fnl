@@ -22,6 +22,7 @@
         window-select        ; Visually switch windows
         zen                  ; distraction-free coding or writing TODO +twilight
         noice                ; noice ui
+        yanky
 
         :editor
         fold                 ; (nigh) universal code folding
