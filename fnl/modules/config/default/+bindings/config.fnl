@@ -2,14 +2,15 @@
 (local {: autoload} (require :core.lib.autoload))
 (local {: nightly?} (autoload :core.lib))
 (local leap (autoload :leap))
+
 ;; Set leader to space by default
 
 (let! mapleader " ")
 (leap.add_default_mappings)
+
 ;; easier command line mode + 
 
 (map! [n] ";" ":" {:desc :vim-ex})
-
 ;;; z
 
 ;;; g
@@ -96,10 +97,11 @@
                  (do
                    (map! [n] :<leader><tab>r "<cmd>Telescope xray23 listCR>"
                          {:desc "View all sessions"})
-                   (map! [n] :<leader><tab>s "<cmd>Telescope xray23 saveCR>"
+                   (map! [n] :<leader><tab>s "<cmd>Telescope xray23 save<CR>"
                          {:desc "Save current session"})))
 
 (map! [n] :<leader><tab>x :<cmd>tabclose<CR> {:desc "Delete this tab"})
+
 ;;; a +actions
 
 ;;; b +buffer
@@ -123,17 +125,20 @@
 
 (map! [n] :<leader>bd :<cmd>bw<CR> {:desc "Delete buffer"})
 (map! [n] :<leader>bz :<cmd>bw<CR> {:desc "Bury buffer"})
+
 ;; i ibuffer
 ;; I ibuffer workspace
 
 (map! [n] :<leader>bk :<cmd>bd<CR> {:desc "Kill buffer"})
 (map! [n] :<leader>bK "<cmd>%bd<CR>" {:desc "Kill all buffers"})
+
 ;; m Set bookmark
 ;; M Delete bookmark 
 
 (map! [n] :<leader>bK :<cmd>enew<CR> {:desc "New empty buffer"})
 (map! [n] :<leader>bO "<cmd>%bd|e#<CR>" {:desc "Kill other buffers"})
 (map! [n] :<leader>br :<cmd>u0<CR> {:desc "Revert buffer"})
+
 ;; R Rename buffer
 
 (map! [n] :<leader>bs :<cmd>w<CR> {:desc "Save buffer"})
@@ -150,6 +155,7 @@
                          {:desc "Switch to scratch buffer"})))
 
 (map! [n] :<leader>by "<cmd>%y+<CR>" {:desc "Yank buffer"})
+
 ;;; c +code
 
 (nyoom-module-p! lsp (map! [n] :<leader>ca `(vim.lsp.buf.code_action)
@@ -212,6 +218,7 @@
 
 (map! [n] :<leader>fC "<cmd>%y+<CR>" {:desc "Copy file contents"})
 (map! [n] :<leader>fC "<cmd>%y+<CR>" {:desc "Copy file contents"})
+
 ;; d Find Directory
 
 (map! [n] :<leader>fD :<cmd>bw<CR> {:desc "Delete this file"})
@@ -247,6 +254,7 @@
                        {:desc "Help for diagnostics"}))
 
 (map! [n] :<leader>he "<cmd>:messages<CR>" {:desc "View message history"})
+
 ;; E: TODO nyoom/sandbox
 ;; f: describe function?
 
@@ -263,6 +271,7 @@
       {:desc "Help for X11 input methods"})
 
 (map! [n] :<leader>hl :<cmd>hist<CR> {:desc "List command history"})
+
 ;; n nyoom/help
 
 ;; o describe symbol
@@ -298,7 +307,6 @@
 (map! [n] :<leader>fp :<cmd>R!echo<CR> {:desc "Vi ex path"})
 (map! [n] :<leader>fr "<C-R><C-O> " {:desc "From register"})
 (map! [n] :<leader>fy "<C-R><C-O>+ " {:desc "From clipboard"})
-
 ;;; n +notes
 
 ;; * search notes for symbol
@@ -348,6 +356,7 @@
                        {:desc "Docker commands"}))
 
 (nyoom-module-p! fshell)
+
 ;; e Open fshell split
 ;; E Open fshell buffer
 ;; f New window
@@ -383,7 +392,6 @@
                        {:desc "Open term split"}))
 
 (map! [n] :<leader>oT :<cmd>term<CR> {:desc "Open term buffer"})
-
 ;;; p +project
 
 ;;; q +quit/session 
