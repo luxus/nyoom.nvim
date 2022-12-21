@@ -16,8 +16,9 @@
         hydra                ; Discount modality for mythological beast hunters
         indent-guides      ; highlighted indent columns
         modeline             ; snazzy, nano-emacs-inspired modeline
-        neo-tree             ; a project drawer, like NERDTree for vim
-        tabs               ; keep tabs on your buffers, literally
+        ;;nvimtree           ; a project drawer, like NERDTree for vim
+        neotree              ; tree-like structures for neovim
+        ;;tabs               ; keep tabs on your buffers, literally
         vc-gutter            ; Get your diff out of the gutter
         window-select        ; Visually switch windows
         zen                  ; distraction-free coding or writing TODO +twilight
@@ -35,7 +36,7 @@
 
         :term
         ;;fshell             ; WIP: the fennel shell that works everywhere
-        toggleterm         ; persistant/floating terminal wrapper for :term
+        toggleterm           ; persistant/floating terminal wrapper for :term
 
         :checkers
         diagnostics          ; tasing you for every semicolon you forget
@@ -88,4 +89,5 @@
         ;;literate           ; FIXME: Disguise your config as poor documentation
         (default             ; Reasonable defaults for reasonable people
           +bindings 
+          +which-key
           +smartparens))

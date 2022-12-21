@@ -1,6 +1,7 @@
 (require-macros :macros)
 (local {: autoload} (require :core.lib.autoload))
-(local {: after} (autoload :core.lib.setup))
+(local {: after : setup} (autoload :core.lib.setup))
+
 ;; You can use the `colorscheme` macro to load a custom theme, or load it manually
 ;; via require. This is the default:
 
